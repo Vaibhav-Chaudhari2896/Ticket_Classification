@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
-import pickle
+import pickle5
 from sklearn.feature_extraction.text import CountVectorizer
 import dill
 import re
@@ -11,11 +11,11 @@ from textblob import TextBlob
 
 # Reading all necessary pickle files
 
-vocab = pickle.load(open('count_vector.pickle', 'rb'))
-Products_labels = pickle.load(open('labels_dict_pandas.pickle', 'rb'))
-tfidf_fit = pickle.load(open('tfidf.pickle', 'rb'))
-model = pickle.load(open('lr_model.pickle', 'rb'))
-clean_complaints_func = pickle.load(open('dill_clean_func.pickle', 'rb'))
+vocab = pickle5.load(open('count_vector.pickle', 'rb'))
+Products_labels = pickle5.load(open('labels_dict_pandas.pickle', 'rb'))
+tfidf_fit = pickle5.load(open('tfidf.pickle', 'rb'))
+model = pickle5.load(open('lr_model.pickle', 'rb'))
+clean_complaints_func = pickle5.load(open('dill_clean_func.pickle', 'rb'))
 clean_data_function = dill.loads(clean_complaints_func)
 app = FastAPI()
 
