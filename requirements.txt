@@ -1,0 +1,10 @@
+uvicorn
+fastapi
+scikit-learn
+dill
+pickle5
+pydantic
+nltk
+textblob
+re
+regex
